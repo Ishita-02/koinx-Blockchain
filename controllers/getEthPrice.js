@@ -22,9 +22,12 @@ const GetEthPrice = async (request, response) => {
 
     await task.start();
 
+    const ethPriceInINR = await getEthPrice();
+    
     return response.status(200).json({
       success: true,
-      message: "Eth Price collection Job Started"
+      message: "Eth Price collection Job Started",
+      currentPrice: ethPriceInINR
     });
   } catch (error) {
     return response.status(500).json({

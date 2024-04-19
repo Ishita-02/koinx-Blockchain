@@ -7,7 +7,7 @@ const getEthBalance  = require('../controllers/getEthBalance');
 
 
 router.get('/getTransactionsByAddress/:walletAddress', GetTransactionsByAddress);
-router.post('/getEthPrice', GetEthPrice);
+router.get('/getEthPrice', GetEthPrice);
 router.get('/getEthBalance/:walletAddress', getEthBalance);
 
 
