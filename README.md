@@ -79,7 +79,11 @@ Please host your code on GitHub.
 1. Deploy your database using MongoDB Atlas or other similar tools.
 2. Deploy your backend using platforms like Heroku or any cloud platform like AWS, GCP or Azure and expose the API to the public.
 
-**Delployed Link: **
+**MongoDB Atlas Screenshot**
+
+![Screenshot 2024-04-19 225227](https://github.com/Ishita-02/koinx-Blockchain/assets/88130678/809e68ed-e70b-4b14-aa9e-830b9131eb3d)
+
+**Delployed Link:**
  ```bash
    https://koinx-blockchain.onrender.com
    ```
