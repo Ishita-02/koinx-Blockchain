@@ -3,6 +3,7 @@ const express = require('express');
 const connectDB = require('./db');
 const cron = require('node-cron');
 const transactionsRouter = require('./routes/index');
+const getEthPrice = require('./helpers/getEthPrice')
 
 connectDB();
 const app = express();
@@ -13,7 +14,7 @@ app.use('/api', transactionsRouter);
 
 cron.schedule('*/10 * * * *', () => {
     console.log('Fetching Ethereum price...');
-    fetchAndStoreEthereumPrice();
+    getEthPrice();
 });
 
 const PORT = process.env.PORT || 3000;
