@@ -12,6 +12,7 @@
    ```
 3. Set up environment variables:
    ```bash
+   PORT= <PORT>
    ETHERSCAN_API_KEY=<Your Etherscan API key>
    MONGO_URI=<Your MongoDB connection URI>
    ```
