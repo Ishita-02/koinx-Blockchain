@@ -2,15 +2,14 @@ require('dotenv').config();
 const express = require('express');
 const connectDB = require('./db');
 const cron = require('node-cron');
-const { fetchAndStoreEthereumPrice } = require('./services/priceService');
-const transactionsRouter = require('./routes/transactions');
+const transactionsRouter = require('./routes/index');
 
 connectDB();
 const app = express();
 
 app.use(express.json());
 
-app.use('/api/transactions', transactionsRouter);
+app.use('/api', transactionsRouter);
 
 cron.schedule('*/10 * * * *', () => {
     console.log('Fetching Ethereum price...');
